@@ -43,7 +43,6 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        File newFile = new File("username.txt");
         pilihWaktu.getItems().addAll(waktu);
         pilihLevel.getItems().addAll(level);
         DBUtils.getSumWords(Player.userId);
@@ -64,23 +63,17 @@ public class Controller implements Initializable {
 
 
     public void playGame(ActionEvent ddd) {
-        File newFile = new File("username.txt");
-        if (newFile.length() == 0) {
-            DBUtils.changeScene(ddd,"popup.fxml","Typing Practice",null,null);
-        }
-        else {
-            levelPilihan = pilihLevel.getValue();
-            waktuPilihan = pilihWaktu.getValue();
+        levelPilihan = pilihLevel.getValue();
+        waktuPilihan = pilihWaktu.getValue();
 
-            if (waktuPilihan == null || levelPilihan == null) {
-                DBUtils.changeScene(ddd,"empty.fxml","Typing Practice",null,null);
-            } else {
-                DBUtils.changeScene(ddd, "game.fxml", "Typing Practice", null, null);
-                if (waktuPilihan == 10) Player.gameMode = DBUtils.getModeId("10 Seconds");
-                else if (waktuPilihan == 30) Player.gameMode = DBUtils.getModeId("30 Seconds");
-                else if (waktuPilihan == 60) Player.gameMode = DBUtils.getModeId("60 Seconds");
-                else Player.gameMode = DBUtils.getModeId("120 Seconds");
-            }
+        if (waktuPilihan == null || levelPilihan == null) {
+            DBUtils.changeScene(ddd,"empty.fxml","Typing Practice",null,null);
+        } else {
+            DBUtils.changeScene(ddd, "game.fxml", "Typing Practice", null, null);
+            if (waktuPilihan == 10) Player.gameMode = DBUtils.getModeId("10 Seconds");
+            else if (waktuPilihan == 30) Player.gameMode = DBUtils.getModeId("30 Seconds");
+            else if (waktuPilihan == 60) Player.gameMode = DBUtils.getModeId("60 Seconds");
+            else Player.gameMode = DBUtils.getModeId("120 Seconds");
         }
 
     }
