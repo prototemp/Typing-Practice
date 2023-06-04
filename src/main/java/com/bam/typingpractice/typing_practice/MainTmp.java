@@ -23,4 +23,8 @@ public class MainTmp extends Application {
         primaryStage.setY(0);
         primaryStage.show();
     }
+
+    public static void main(String[] args) {
+        launch();
+    }
 }
