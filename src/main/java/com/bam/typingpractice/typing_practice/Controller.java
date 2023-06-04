@@ -7,7 +7,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
-import java.io.File;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

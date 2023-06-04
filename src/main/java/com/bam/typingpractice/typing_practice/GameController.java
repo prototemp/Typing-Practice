@@ -21,7 +21,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class GameController implements Initializable {
-
     private int wordCounter = 0;
     private int first = 1;
     private File saveData;
@@ -55,6 +54,8 @@ public class GameController implements Initializable {
     private Button playAgain;
     @FXML
     public Button btn_stop;
+    @FXML
+    public Button btn_mainMenu;
 
 
     ArrayList<String> words = new ArrayList<>();
@@ -87,9 +88,10 @@ public class GameController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         playAgain.setVisible(false);
         playAgain.setDisable(true);
+        btn_mainMenu.setVisible(false);
+        btn_mainMenu.setDisable(true);
         seconds.setText(String.valueOf(Controller.waktuPilihan));
         addToList();
         Collections.shuffle(words);
@@ -113,6 +115,7 @@ public class GameController implements Initializable {
         }
 
         btn_stop.setOnAction(actionEvent -> timer = -1);
+        playAgain.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"game.fxml","Typing Practice",null,null));
 
         userWord.textProperty().addListener((observable, oldValue, newValue) -> {
             String real = programWord.getText();
@@ -177,6 +180,8 @@ public class GameController implements Initializable {
                 if (timer <= -2) {
                     playAgain.setVisible(true);
                     playAgain.setDisable(false);
+                    btn_mainMenu.setVisible(true);
+                    btn_mainMenu.setDisable(false);
                     btn_stop.setVisible(false);
                     btn_stop.setDisable(true);
                     executor.shutdown();
