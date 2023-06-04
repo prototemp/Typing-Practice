@@ -63,7 +63,6 @@ public class DBUtils {
             resultSet = psCheckExist.executeQuery();
 
             if (resultSet.isBeforeFirst()){
-                System.out.println("User already exist");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Cannot enter this username");
                 alert.show();
@@ -73,6 +72,9 @@ public class DBUtils {
                 psInsert.setString(2,password);
                 psInsert.setString(3,frasa);
                 psInsert.executeUpdate();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Account successfully created");
+                alert.show();
                 changeScene(event,"landing.fxml","Log-In",null,null);
             }
 
@@ -119,7 +121,6 @@ public class DBUtils {
             psLogin.setString(1,username);
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User not found in the database");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -132,7 +133,6 @@ public class DBUtils {
                         changeScene(event,"logged-in.fxml","Log-in",username,retrievedFrasa);
                         Player.frasa = retrievedFrasa;
                     } else {
-                        System.out.println("Password did not match!");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Provided cridentials are incorrect!");
                         alert.show();
@@ -177,7 +177,6 @@ public class DBUtils {
             resultSet = psCheckExist.executeQuery();
 
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User don't exist");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Insert correct username");
                 alert.show();
@@ -189,9 +188,11 @@ public class DBUtils {
                         psInsert.setString(1,newPassword);
                         psInsert.setString(2,username);
                         psInsert.executeUpdate();
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setContentText("Password successfully changed");
+                        alert.show();
                         changeScene(event,"landing.fxml","Log-in",null,null);
                     } else {
-                        System.out.println("Frasa did not match!");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Provided cridentials are incorrect!");
                         alert.show();
@@ -244,7 +245,6 @@ public class DBUtils {
             resultSet = psCheckExist.executeQuery();
 
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User don't exist");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Insert correct username");
                 alert.show();
@@ -257,9 +257,12 @@ public class DBUtils {
                         psInsert.setString(1,newFrasa);
                         psInsert.setString(2,username);
                         psInsert.executeUpdate();
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setContentText("Frasa successfully changed");
+                        alert.show();
                         changeScene(event,"settings.fxml","Settings",null,null);
                     } else {
-                        System.out.println("Frasa or Password did not match!");
+
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Provided cridentials are incorrect!");
                         alert.show();
@@ -312,8 +315,7 @@ public class DBUtils {
             resultSet = psCheckExist.executeQuery();
 
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User don't exist");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
+                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Insert correct username");
                 alert.show();
             } else {
@@ -321,6 +323,9 @@ public class DBUtils {
                     psDelete = connection.prepareStatement("DELETE FROM users WHERE username = ?");
                     psDelete.setString(1,username);
                     psDelete.executeUpdate();
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("Account successfully deleted");
+                    alert.show();
                     changeScene(event,"landing.fxml","Log-in",null,null);
                 }
             }
@@ -401,7 +406,6 @@ public class DBUtils {
 
             resultSet = psInsert.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User not found in the database");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -449,7 +453,6 @@ public class DBUtils {
             psInsert.setString(1, String.valueOf(modeName));
             resultSet = psInsert.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User not found in the database");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -496,7 +499,6 @@ public class DBUtils {
             psLogin.setInt(1, userid);
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User never playing");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -551,7 +553,6 @@ public class DBUtils {
             psLogin.setInt(1, userid);
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User never playing");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -610,7 +611,6 @@ public class DBUtils {
             psLogin.setInt(1, userid);
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User never playing");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -669,7 +669,6 @@ public class DBUtils {
             psLogin.setInt(1, userid);
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User never playing");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
@@ -739,7 +738,6 @@ public class DBUtils {
                 countHistory = Integer.parseInt(countSet.getString(1));
             }
             if (!resultSet.isBeforeFirst()){
-                System.out.println("User never playing");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided cridentials are incorrect!");
                 alert.show();
