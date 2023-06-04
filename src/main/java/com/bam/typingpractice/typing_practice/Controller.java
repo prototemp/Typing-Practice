@@ -3,6 +3,7 @@ package com.bam.typingpractice.typing_practice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
@@ -16,6 +17,10 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    @FXML
+    public CheckBox checkCapital;
+    @FXML
+    public CheckBox checkNumber;
     @FXML
     private Label timeLabel;
     @FXML
@@ -38,6 +43,8 @@ public class Controller implements Initializable {
 
     public static String levelPilihan;
     public static Integer waktuPilihan;
+    public static boolean modCapital;
+    public static boolean modNumber;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -68,6 +75,8 @@ public class Controller implements Initializable {
         if (waktuPilihan == null || levelPilihan == null) {
             DBUtils.changeScene(ddd,"empty.fxml","Typing Practice",null,null);
         } else {
+            modCapital = checkCapital.isSelected();
+            modNumber = checkNumber.isSelected();
             DBUtils.changeScene(ddd, "game.fxml", "Typing Practice", null, null);
             if (waktuPilihan == 10) Player.gameMode = DBUtils.getModeId("10 Seconds");
             else if (waktuPilihan == 30) Player.gameMode = DBUtils.getModeId("30 Seconds");

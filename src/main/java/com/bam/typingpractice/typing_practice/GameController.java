@@ -71,7 +71,31 @@ public class GameController implements Initializable {
             } else reader = new BufferedReader(new FileReader("wordsList_mudah"));
 
             String line = reader.readLine();
+
             while (line != null) {
+                if (Controller.modCapital){
+                    StringBuilder strTmp = new StringBuilder(line);
+                    for (int i = 0; i < line.length(); i++) {
+                        Random random = new Random();
+                        char c = line.charAt(i);
+                        if (random.nextBoolean()) {
+                            c = Character.toUpperCase(c);
+                        }
+                        strTmp.setCharAt(i,c);
+                    }
+                    line = String.valueOf(strTmp);
+                }
+                if (Controller.modNumber){
+                    StringBuilder strTmp = new StringBuilder(line);
+                    for (int i = 0; i <= line.length(); i++) {
+                        Random random = new Random();
+                        int c = random.nextInt(10);
+                        if (random.nextBoolean()) {
+                            strTmp.insert(i,c);
+                        }
+                    }
+                    line = String.valueOf(strTmp);
+                }
                 words.add(line);
                 // read next line
                 line = reader.readLine();
