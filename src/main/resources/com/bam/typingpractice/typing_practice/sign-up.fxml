@@ -5,96 +5,81 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-      prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.bam.typingpractice.typing_practice.SignUpController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.SignUpController">
    <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0a1931;">
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@5_logo.png"/>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@5_logo.png" />
       </ImageView>
-      <Label layoutX="28.0" layoutY="184.0" text="Kelompok 5" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="255.0" text="Kelompok 5" textFill="WHITE">
          <font>
-            <Font name="JetBrains Mono ExtraBold" size="24.0"/>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="228.0" prefHeight="20.0" prefWidth="159.0"
-             text="Syarifah Raista Fitraliza" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="16.0" layoutY="299.0" prefHeight="20.0" prefWidth="159.0" text="Syarifah Raista Fitraliza" textFill="WHITE">
          <font>
-            <Font name="Arial" size="14.0"/>
+            <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="258.0" prefHeight="20.0" prefWidth="159.0"
-             text="Bahrul Alam Malindo" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="16.0" layoutY="329.0" prefHeight="20.0" prefWidth="159.0" text="Bahrul Alam Malindo" textFill="WHITE">
          <font>
-            <Font name="Arial" size="14.0"/>
+            <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="287.0" prefHeight="20.0" prefWidth="159.0"
-             text="Chionia Agni Pratistha" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="16.0" layoutY="358.0" prefHeight="20.0" prefWidth="159.0" text="Chionia Agni Pratistha" textFill="WHITE">
          <font>
-            <Font name="Arial" size="14.0"/>
+            <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="317.0" prefHeight="20.0" prefWidth="159.0"
-             text="Ferdinal Alvino " textFill="WHITE">
+      <Label alignment="CENTER" layoutX="16.0" layoutY="388.0" prefHeight="20.0" prefWidth="159.0" text="Ferdinal Alvino " textFill="WHITE">
          <font>
-            <Font name="Arial" size="14.0"/>
+            <Font name="Arial" size="14.0" />
          </font>
       </Label>
    </AnchorPane>
-   <AnchorPane prefHeight="400.0" prefWidth="401.0">
-      <Label alignment="CENTER" layoutX="24.0" layoutY="68.0" prefHeight="22.0" prefWidth="89.0" text="Username:"
-             textFill="#0b0b0b">
+   <AnchorPane prefHeight="560.0" prefWidth="499.0">
+      <Label alignment="CENTER" layoutX="34.0" layoutY="68.0" prefHeight="22.0" prefWidth="89.0" text="Username:" textFill="#0b0b0b">
          <font>
-            <Font name="Calibri" size="18.0"/>
+            <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="31.0" layoutY="110.0" prefHeight="20.0" prefWidth="75.0" text="Password:"
-             textFill="#0b0b0b">
+      <Label alignment="CENTER" layoutX="41.0" layoutY="110.0" prefHeight="20.0" prefWidth="75.0" text="Password:" textFill="#0b0b0b">
          <font>
-            <Font name="Calibri" size="18.0"/>
+            <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_username" layoutX="118.0" layoutY="61.0" prefHeight="34.0" prefWidth="258.0">
+      <TextField fx:id="tf_username" layoutX="148.0" layoutY="61.0" prefHeight="34.0" prefWidth="258.0">
          <font>
-            <Font name="Arial" size="18.0"/>
+            <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="tf_password" layoutX="118.0" layoutY="104.0" prefHeight="34.0" prefWidth="258.0">
+      <TextField fx:id="tf_password" layoutX="148.0" layoutY="104.0" prefHeight="34.0" prefWidth="258.0">
          <font>
-            <Font name="Arial" size="18.0"/>
+            <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_signup" layoutX="118.0" layoutY="270.0" mnemonicParsing="false" prefHeight="35.0"
-              prefWidth="152.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Signup"
-              textFill="#ffc947">
+      <Button fx:id="btn_signup" layoutX="138.0" layoutY="280.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="152.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Signup" textFill="#ffc947">
          <font>
-            <Font name="Arial Rounded MT Bold" size="18.0"/>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="46.0" layoutY="163.0" prefHeight="22.0" prefWidth="295.0"
-             text="Frasa Pemulihan Akun: " textFill="#0b0b0b">
+      <Label alignment="CENTER" layoutX="66.0" layoutY="163.0" prefHeight="22.0" prefWidth="295.0" text="Frasa Pemulihan Akun: " textFill="#0b0b0b">
          <font>
-            <Font name="Calibri" size="18.0"/>
+            <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_frasa" layoutX="71.0" layoutY="200.0" prefHeight="34.0" prefWidth="258.0">
+      <TextField fx:id="tf_frasa" layoutX="91.0" layoutY="200.0" prefHeight="34.0" prefWidth="258.0">
          <font>
-            <Font name="Arial" size="18.0"/>
+            <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <Label alignment="CENTER" layoutX="69.0" layoutY="332.0" prefHeight="22.0" prefWidth="144.0"
-             text="Already a member" textFill="#0b0b0b">
+      <Label alignment="CENTER" layoutX="119.0" layoutY="352.0" prefHeight="22.0" prefWidth="144.0" text="Already a member" textFill="#0b0b0b">
          <font>
-            <Font name="Calibri" size="18.0"/>
+            <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btn_login" layoutX="201.0" layoutY="326.0" mnemonicParsing="false"
-              style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login!" textFill="#2d43bf"
-              underline="true">
+      <Button fx:id="btn_login" layoutX="251.0" layoutY="346.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login!" textFill="#2d43bf" underline="true">
          <font>
-            <Font name="Calibri" size="18.0"/>
+            <Font name="Calibri" size="18.0" />
          </font>
       </Button>
    </AnchorPane>

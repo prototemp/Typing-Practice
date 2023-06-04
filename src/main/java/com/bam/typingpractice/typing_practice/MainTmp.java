@@ -15,9 +15,9 @@ public class MainTmp extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(MainTmp.class.getResource("landing.fxml")));
         primaryStage.setTitle("Typing Practice");
-        primaryStage.setScene(new Scene(root, 600, 460));
+        primaryStage.setScene(new Scene(root, 600+100, 460+100));
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-        primaryStage.setX(screenBounds.getWidth()/2-((double) 460 /2));
+        primaryStage.setX(screenBounds.getWidth()/2-((double) 660 /2));
         primaryStage.setY(0);
         primaryStage.show();
     }

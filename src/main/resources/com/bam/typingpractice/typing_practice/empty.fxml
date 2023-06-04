@@ -4,26 +4,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0a1931;"
-            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.bam.typingpractice.typing_practice.EmptyController">
-    <Text fill="WHITE" layoutX="21.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0"
-          text="Waktu dan Level tidak boleh kosong !!!" textAlignment="CENTER" wrappingWidth="569.1328735351562">
+<AnchorPane prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.EmptyController">
+    <Text fill="WHITE" layoutX="71.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waktu dan Level tidak boleh kosong !!!" textAlignment="CENTER" wrappingWidth="569.1328735351562">
         <font>
-            <Font name="JetBrains Mono ExtraBold" size="24.0"/>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
         </font>
     </Text>
-    <Text fill="WHITE" layoutX="107.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0"
-          text="Harap pilih waktu dan level dengan pilihan yang sudah disediakan" textAlignment="CENTER"
-          wrappingWidth="386.13294219970703">
+    <Text fill="WHITE" layoutX="157.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harap pilih waktu dan level dengan pilihan yang sudah disediakan" textAlignment="CENTER" wrappingWidth="386.13294219970703">
         <font>
-            <Font name="JetBrains Mono ExtraBold" size="24.0"/>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
         </font>
     </Text>
-    <Button layoutX="223.0" layoutY="303.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0"
-            prefWidth="152.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="OKE!" textFill="#ffc947">
+    <Button layoutX="273.0" layoutY="383.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="152.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="OKE!" textFill="#ffc947">
         <font>
-            <Font name="Arial Rounded MT Bold" size="18.0"/>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
         </font>
     </Button>
 </AnchorPane>
