@@ -6,101 +6,119 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.Controller">
     <columnConstraints>
-        <ColumnConstraints />
+        <ColumnConstraints/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints />
+        <RowConstraints/>
     </rowConstraints>
-    <children>
-        <Pane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #0a1931;">
-            <children>
-                <Label fx:id="displayUsername" alignment="CENTER" layoutX="167.0" prefHeight="57.0" prefWidth="267.0" text="Welcome, user!" textAlignment="CENTER" textFill="WHITE">
-                    <font>
-                        <Font name="Calibri" size="35.0" />
-                    </font>
-                </Label>
-                <Label fx:id="timeLabel" layoutX="162.0" layoutY="57.0" prefHeight="35.0" prefWidth="276.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE">
-                    <font>
-                        <Font name="Calibri" size="30.0" />
-                    </font>
-                </Label>
-                <Button fx:id="playButton" alignment="BOTTOM_LEFT" layoutX="245.0" layoutY="107.0" mnemonicParsing="false" onAction="#playGame" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Play" textFill="#ffc947">
-                    <font>
-                        <Font name="Calibri" size="23.0" />
-                    </font>
-                </Button>
-            <ChoiceBox fx:id="pilihWaktu" layoutX="80.0" layoutY="238.0" prefWidth="150.0" />
-                <Label alignment="CENTER" layoutX="178.0" layoutY="291.0" prefHeight="19.0" prefWidth="245.0" text="Overall data" textAlignment="CENTER" textFill="WHITE">
-                    <font>
-                        <Font name="Calibri" size="24.0" />
-                    </font>
-                </Label>
-                <Circle fill="#ffffff00" layoutX="178.0" layoutY="378.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-                <Text fill="WHITE" layoutX="143.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total entered">
-                    <font>
-                        <Font name="Calibri" size="13.0" />
-                    </font>
-                </Text>
-                <Text fx:id="total" fill="WHITE" layoutX="148.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
-                    <font>
-                        <Font name="Calibri" size="36.0" />
-                    </font>
-                </Text>
-                <Circle fill="#ffffff00" layoutX="300.0" layoutY="378.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-                <Text fill="WHITE" layoutX="260.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="average wpm" textAlignment="CENTER" wrappingWidth="80.30908203125">
-                    <font>
-                        <Font name="Calibri" size="13.0" />
-                    </font>
-                </Text>
-                <Text fx:id="wpm" fill="WHITE" layoutX="270.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
-                    <font>
-                        <Font name="Calibri" size="36.0" />
-                    </font>
-                </Text>
-                <Circle fill="#ffffff00" layoutX="423.0" layoutY="378.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-                <Text fill="WHITE" layoutX="406.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="invalid">
-                    <font>
-                        <Font name="Calibri" size="13.0" />
-                    </font>
-                </Text>
-                <Text fx:id="invalid" fill="WHITE" layoutX="393.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
-                    <font>
-                        <Font name="Calibri" size="36.0" />
-                    </font>
-                </Text>
-                <ImageView fitHeight="28.0" fitWidth="22.0" layoutX="308.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@icon.png" />
-                    </image>
-                </ImageView>
-            <ChoiceBox fx:id="pilihLevel" layoutX="359.0" layoutY="238.0" prefWidth="150.0" />
-            <Label alignment="CENTER" layoutX="33.0" layoutY="201.0" prefHeight="19.0" prefWidth="245.0" text="Waktu:" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="24.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="316.0" layoutY="201.0" prefHeight="19.0" prefWidth="245.0" text="Level:" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="24.0" />
-               </font>
-            </Label>
-            <Button fx:id="wikiButton" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="165.0" mnemonicParsing="false" onAction="#wikiGame" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Wiki" textFill="#ffc947">
-               <font>
-                  <Font name="Calibri" size="23.0" />
-               </font>
-            </Button>
-            <Button fx:id="historyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="383.0" layoutY="129.0" mnemonicParsing="false" onAction="#historyTable" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="History" textFill="#ffc947">
-               <font>
-                  <Font name="Calibri" size="23.0" />
-               </font>
-            </Button>
-            <Button fx:id="btn_logout" alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="129.0" mnemonicParsing="false" onAction="#settings" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Settings" textFill="#ffc947">
-               <font>
-                  <Font name="Calibri" size="23.0" />
-               </font>
-            </Button>
-            </children></Pane>
-    </children>
+    <Pane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #0a1931;">
+        <Label fx:id="displayUsername" alignment="CENTER" layoutX="167.0" prefHeight="57.0" prefWidth="267.0"
+               text="Welcome, user!" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="35.0"/>
+            </font>
+        </Label>
+        <Label fx:id="timeLabel" layoutX="162.0" layoutY="57.0" prefHeight="35.0" prefWidth="276.0"
+               style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="30.0"/>
+            </font>
+        </Label>
+        <Button alignment="BOTTOM_LEFT" layoutX="245.0" layoutY="107.0" mnemonicParsing="false"
+                onAction="#playGame" prefHeight="35.0" prefWidth="110.0"
+                style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Play" textFill="#ffc947">
+            <font>
+                <Font name="Calibri" size="23.0"/>
+            </font>
+        </Button>
+        <ChoiceBox fx:id="pilihWaktu" layoutX="80.0" layoutY="238.0" prefWidth="150.0"/>
+        <Label alignment="CENTER" layoutX="178.0" layoutY="291.0" prefHeight="19.0" prefWidth="245.0"
+               text="Overall data" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="24.0"/>
+            </font>
+        </Label>
+        <Circle fill="#ffffff00" layoutX="178.0" layoutY="378.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE"
+                strokeWidth="3.0"/>
+        <Text fill="WHITE" layoutX="143.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="total entered">
+            <font>
+                <Font name="Calibri" size="13.0"/>
+            </font>
+        </Text>
+        <Text fx:id="total" fill="WHITE" layoutX="148.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
+            <font>
+                <Font name="Calibri" size="36.0"/>
+            </font>
+        </Text>
+        <Circle fill="#ffffff00" layoutX="300.0" layoutY="378.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE"
+                strokeWidth="3.0"/>
+        <Text fill="WHITE" layoutX="260.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="average wpm"
+              textAlignment="CENTER" wrappingWidth="80.30908203125">
+            <font>
+                <Font name="Calibri" size="13.0"/>
+            </font>
+        </Text>
+        <Text fx:id="wpm" fill="WHITE" layoutX="270.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
+            <font>
+                <Font name="Calibri" size="36.0"/>
+            </font>
+        </Text>
+        <Circle fill="#ffffff00" layoutX="423.0" layoutY="378.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE"
+                strokeWidth="3.0"/>
+        <Text fill="WHITE" layoutX="406.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="invalid">
+            <font>
+                <Font name="Calibri" size="13.0"/>
+            </font>
+        </Text>
+        <Text fx:id="invalid" fill="WHITE" layoutX="393.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
+            <font>
+                <Font name="Calibri" size="36.0"/>
+            </font>
+        </Text>
+        <ImageView fitHeight="28.0" fitWidth="22.0" layoutX="308.0" layoutY="118.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@icon.png"/>
+        </ImageView>
+        <ChoiceBox fx:id="pilihLevel" layoutX="359.0" layoutY="238.0" prefWidth="150.0"/>
+        <Label alignment="CENTER" layoutX="33.0" layoutY="201.0" prefHeight="19.0" prefWidth="245.0" text="Waktu:"
+               textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="24.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="316.0" layoutY="201.0" prefHeight="19.0" prefWidth="245.0" text="Level:"
+               textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="24.0"/>
+            </font>
+        </Label>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="165.0"
+                mnemonicParsing="false" onAction="#wikiGame" prefHeight="35.0" prefWidth="110.0"
+                style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Wiki" textFill="#ffc947">
+            <font>
+                <Font name="Calibri" size="23.0"/>
+            </font>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="383.0" layoutY="129.0"
+                mnemonicParsing="false" onAction="#historyTable" prefHeight="35.0" prefWidth="110.0"
+                style="-fx-background-color: #185adb; -fx-cursor: hand;" text="History" textFill="#ffc947">
+            <font>
+                <Font name="Calibri" size="23.0"/>
+            </font>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="129.0"
+                mnemonicParsing="false" onAction="#settings" prefHeight="35.0" prefWidth="110.0"
+                style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Settings" textFill="#ffc947">
+            <font>
+                <Font name="Calibri" size="23.0"/>
+            </font>
+        </Button>
+    </Pane>
 </GridPane>

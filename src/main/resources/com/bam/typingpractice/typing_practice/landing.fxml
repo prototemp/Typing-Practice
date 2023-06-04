@@ -5,94 +5,103 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.LoginController">
-   <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0a1931;">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@5_logo.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="28.0" layoutY="184.0" text="Kelompok 5" textFill="WHITE">
-               <font>
-                  <Font name="JetBrains Mono ExtraBold" size="24.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="228.0" prefHeight="20.0" prefWidth="159.0" text="Syarifah Raista Fitraliza" textFill="WHITE">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="258.0" prefHeight="20.0" prefWidth="159.0" text="Bahrul Alam Malindo" textFill="WHITE">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="287.0" prefHeight="20.0" prefWidth="159.0" text="Chionia Agni Pratistha" textFill="WHITE">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="317.0" prefHeight="20.0" prefWidth="159.0" text="Ferdinal Alvino " textFill="WHITE">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="401.0">
-         <children>
-            <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="144.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@lock-icon.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER" layoutX="20.0" layoutY="174.0" prefHeight="22.0" prefWidth="89.0" text="Username:" textFill="#0b0b0b">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="27.0" layoutY="216.0" prefHeight="20.0" prefWidth="75.0" text="Password:" textFill="#0b0b0b">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="tf_username" layoutX="114.0" layoutY="167.0" prefHeight="34.0" prefWidth="258.0">
-               <font>
-                  <Font name="Arial" size="18.0" />
-               </font>
-            </TextField>
-            <PasswordField fx:id="tf_password" layoutX="114.0" layoutY="210.0" prefHeight="34.0" prefWidth="258.0">
-               <font>
-                  <Font name="Arial" size="18.0" />
-               </font>
-            </PasswordField>
-            <Button fx:id="btn_login" layoutX="114.0" layoutY="276.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="152.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Login" textFill="#ffc947">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label alignment="CENTER" layoutX="7.0" layoutY="333.0" prefHeight="22.0" prefWidth="152.0" text="Not a User?" textFill="#0b0b0b">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Label>
-            <Button fx:id="btn_signup" layoutX="122.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#2d43bf" underline="true">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Button>
-            <Label alignment="CENTER" layoutX="168.0" layoutY="332.0" prefHeight="22.0" prefWidth="89.0" text="Or" textFill="#0b0b0b">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Label>
-            <Button fx:id="btn_forgot" layoutX="219.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Forgot Password" textFill="#2d43bf" underline="true">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Button>
-         </children></AnchorPane>
-   </children>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.bam.typingpractice.typing_practice.LoginController">
+   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0a1931;">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@5_logo.png"/>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="184.0" text="Kelompok 5" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="24.0"/>
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="228.0" prefHeight="20.0" prefWidth="159.0"
+             text="Syarifah Raista Fitraliza" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0"/>
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="258.0" prefHeight="20.0" prefWidth="159.0"
+             text="Bahrul Alam Malindo" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0"/>
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="287.0" prefHeight="20.0" prefWidth="159.0"
+             text="Chionia Agni Pratistha" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0"/>
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="317.0" prefHeight="20.0" prefWidth="159.0"
+             text="Ferdinal Alvino " textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0"/>
+         </font>
+      </Label>
+   </AnchorPane>
+   <AnchorPane prefHeight="400.0" prefWidth="401.0">
+      <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="144.0" layoutY="14.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@lock-icon.png"/>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="174.0" prefHeight="22.0" prefWidth="89.0" text="Username:"
+             textFill="#0b0b0b">
+         <font>
+            <Font name="Calibri" size="18.0"/>
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="27.0" layoutY="216.0" prefHeight="20.0" prefWidth="75.0" text="Password:"
+             textFill="#0b0b0b">
+         <font>
+            <Font name="Calibri" size="18.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="tf_username" layoutX="114.0" layoutY="167.0" prefHeight="34.0" prefWidth="258.0">
+         <font>
+            <Font name="Arial" size="18.0"/>
+         </font>
+      </TextField>
+      <PasswordField fx:id="tf_password" layoutX="114.0" layoutY="210.0" prefHeight="34.0" prefWidth="258.0">
+         <font>
+            <Font name="Arial" size="18.0"/>
+         </font>
+      </PasswordField>
+      <Button fx:id="btn_login" layoutX="114.0" layoutY="276.0" mnemonicParsing="false" prefHeight="35.0"
+              prefWidth="152.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Login"
+              textFill="#ffc947">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0"/>
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="333.0" prefHeight="22.0" prefWidth="152.0" text="Not a User?"
+             textFill="#0b0b0b">
+         <font>
+            <Font name="Calibri" size="18.0"/>
+         </font>
+      </Label>
+      <Button fx:id="btn_signup" layoutX="122.0" layoutY="327.0" mnemonicParsing="false"
+              style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#2d43bf"
+              underline="true">
+         <font>
+            <Font name="Calibri" size="18.0"/>
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="332.0" prefHeight="22.0" prefWidth="89.0" text="Or"
+             textFill="#0b0b0b">
+         <font>
+            <Font name="Calibri" size="18.0"/>
+         </font>
+      </Label>
+      <Button fx:id="btn_forgot" layoutX="219.0" layoutY="327.0" mnemonicParsing="false"
+              style="-fx-background-color: transparent; -fx-cursor: hand;" text="Forgot Password" textFill="#2d43bf"
+              underline="true">
+         <font>
+            <Font name="Calibri" size="18.0"/>
+         </font>
+      </Button>
+   </AnchorPane>
 </HBox>
