@@ -15,7 +15,7 @@
          <font>
             <Font name="Calibri" size="18.0" />
          </font></Button>
-      <Label fx:id="label_frasa" alignment="CENTER" layoutX="67.0" layoutY="84.0" text="Frasa Pemulihan Passwordmu Yaitu: " textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="67.0" layoutY="84.0" text="Frasa Pemulihan Passwordmu Yaitu: " textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="24.0" />
          </font>

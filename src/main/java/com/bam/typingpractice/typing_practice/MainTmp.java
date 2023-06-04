@@ -17,9 +17,7 @@ public class MainTmp extends Application {
         primaryStage.setTitle("Typing Practice");
         primaryStage.setScene(new Scene(root, 600, 460));
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-//        System.out.println(screenBounds.getWidth());
         primaryStage.setX(screenBounds.getWidth()/2-((double) 460 /2));
-//        primaryStage.setX(360);
         primaryStage.setY(0);
         primaryStage.show();
     }

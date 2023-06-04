@@ -1,7 +1,5 @@
 package com.bam.typingpractice.typing_practice;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -25,18 +23,15 @@ public class SignUpController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        btn_signup.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                if (!tf_username.getText().trim().isEmpty() && !tf_password.getText().trim().isEmpty() && !tf_frasa.getText().trim().isEmpty()){
-                    DBUtils.signUpUser(actionEvent,tf_username.getText(),tf_password.getText(),tf_frasa.getText());
-                }
-                else {
-                    System.out.println("Please fill in Information");
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("Please fill in Information to sign up!");
-                    alert.show();
-                }
+        btn_signup.setOnAction(actionEvent -> {
+            if (!tf_username.getText().trim().isEmpty() && !tf_password.getText().trim().isEmpty() && !tf_frasa.getText().trim().isEmpty()){
+                DBUtils.signUpUser(actionEvent,tf_username.getText(),tf_password.getText(),tf_frasa.getText());
+            }
+            else {
+                System.out.println("Please fill in Information");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Please fill in Information to sign up!");
+                alert.show();
             }
         });
 

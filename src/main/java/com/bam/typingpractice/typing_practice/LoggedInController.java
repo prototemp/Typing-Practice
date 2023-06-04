@@ -1,13 +1,10 @@
 package com.bam.typingpractice.typing_practice;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,8 +22,6 @@ public class LoggedInController implements Initializable {
     private Button btn_logout;
     @FXML
     private Label label_welcome;
-    @FXML
-    private Label label_frasa;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btn_logout.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"landing.fxml","Logged in!", null, null));

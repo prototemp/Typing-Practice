@@ -3,7 +3,6 @@ package com.bam.typingpractice.typing_practice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
@@ -58,8 +57,6 @@ public class Controller implements Initializable {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-//            String data = reader.nextLine();
-//            displayUsername.setText("Welcome, "+data);
             displayUsername.setText("Welcome, "+ Player.username);
         }
 
@@ -72,10 +69,6 @@ public class Controller implements Initializable {
         timeLabel.setText("Hari ini " + strDay);
 
         // we need to display data
-//        int[] data = FileHandling.sumUpNumbers("src/data");
-//        total.setText(String.valueOf(data[0]));
-//        wpm.setText(String.valueOf(Math.round(data[1]*1.0/data[3])));
-//        invalid.setText(String.valueOf(data[2]));
         total.setText(String.valueOf(Player.sumWords));
         wpm.setText(String.valueOf(Math.round(Player.trueWords*1.0/Player.countHist)));
         invalid.setText(String.valueOf(Player.falseWords));

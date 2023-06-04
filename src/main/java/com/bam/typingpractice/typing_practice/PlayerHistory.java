@@ -3,12 +3,12 @@ package com.bam.typingpractice.typing_practice;
 public class PlayerHistory {
 
     public String username;
-    public int userId = 0;
-    public int gameMode = 0;
-    public int sessionWords = 0;
-    public int sessionTrueWords = 0;
-    public int sessionFalseWords = 0;
-    public String playTime = "";
+    public int userId;
+    public int gameMode;
+    public int sessionWords;
+    public int sessionTrueWords;
+    public int sessionFalseWords;
+    public String playTime;
 
     public PlayerHistory(int userId, int gameMode, int sessionWords, int sessionTrueWords, int sessionFalseWords, String playTime) {
         this.username = Player.username;

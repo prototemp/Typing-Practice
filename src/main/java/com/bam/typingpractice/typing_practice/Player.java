@@ -1,7 +1,5 @@
 package com.bam.typingpractice.typing_practice;
 
-import java.util.ArrayList;
-
 public class Player {
     public static String username;
     public static String frasa;

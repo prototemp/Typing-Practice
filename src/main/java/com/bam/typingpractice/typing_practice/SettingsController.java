@@ -22,8 +22,6 @@ public class SettingsController implements Initializable {
     private Button btn_logout;
     @FXML
     private Label label_welcome;
-    @FXML
-    private Label label_frasa;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         label_welcome.setText("Welcome! " + Player.username);

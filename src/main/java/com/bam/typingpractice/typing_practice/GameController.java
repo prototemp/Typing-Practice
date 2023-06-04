@@ -1,9 +1,6 @@
 package com.bam.typingpractice.typing_practice;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -117,30 +114,25 @@ public class GameController implements Initializable {
 
         btn_stop.setOnAction(actionEvent -> timer = -1);
 
-        userWord.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable,
-                                String oldValue, String newValue) {
-
-                String real = programWord.getText();
-                String ss = "";
-                int maxIdx = real.trim().length();
-                if(newValue.trim().length() <= maxIdx){
-                    ss = real.substring(0,newValue.trim().length());
-                }
-                else {
-                    ss = real.substring(0,maxIdx);
-                }
-                // if correct
-                if (newValue.trim().equals(ss)) {
-                    pane_basis.setStyle("-fx-background-color: #1cfc03;");
-                }
-                else {
-                    pane_basis.setStyle("-fx-background-color: #e04646;");
-                }
-                programWord.setFill(Color.DARKBLUE);
-                secondProgramWord.setFill(Color.DARKBLUE);
+        userWord.textProperty().addListener((observable, oldValue, newValue) -> {
+            String real = programWord.getText();
+            String ss;
+            int maxIdx = real.trim().length();
+            if(newValue.trim().length() <= maxIdx){
+                ss = real.substring(0,newValue.trim().length());
             }
+            else {
+                ss = real.substring(0,maxIdx);
+            }
+            // if correct
+            if (newValue.trim().equals(ss)) {
+                pane_basis.setStyle("-fx-background-color: #1cfc03;");
+            }
+            else {
+                pane_basis.setStyle("-fx-background-color: #e04646;");
+            }
+            programWord.setFill(Color.DARKBLUE);
+            secondProgramWord.setFill(Color.DARKBLUE);
         });
 
     }
@@ -154,7 +146,7 @@ public class GameController implements Initializable {
             if (timer > -1) {
                 seconds.setText(String.valueOf(timer));
                 try {
-                    Process process = runTime.exec(executablePath);
+                    runTime.exec(executablePath);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

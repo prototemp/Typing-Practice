@@ -24,17 +24,7 @@ public class PasswordChangeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btn_change.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changePassword(actionEvent,tf_username.getText(),tf_newPassword.getText(),tf_frasa.getText());
-            }
-        });
-        btn_signup.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeScene(actionEvent,"sign-up.fxml","Sign up!", null, null);
-            }
-        });
+        btn_change.setOnAction(actionEvent -> DBUtils.changePassword(actionEvent,tf_username.getText(),tf_newPassword.getText(),tf_frasa.getText()));
+        btn_signup.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sign-up.fxml","Sign up!", null, null));
     }
 }

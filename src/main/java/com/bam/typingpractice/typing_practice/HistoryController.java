@@ -1,7 +1,5 @@
 package com.bam.typingpractice.typing_practice;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -38,12 +36,7 @@ public class HistoryController implements Initializable {
         falseCol.setCellValueFactory(new PropertyValueFactory<>("sessionFalseWords"));
         playtimeCol.setCellValueFactory(new PropertyValueFactory<>("playTime"));
         modeCol.setCellValueFactory(new PropertyValueFactory<>("gameMode"));
-        btn_back.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                DBUtils.changeScene(actionEvent,"sample.fxml","Main Menu",null,null);
-            }
-        });
+        btn_back.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sample.fxml","Main Menu",null,null));
         DBUtils.userHistory(Player.userId,histTable);
     }
 }
