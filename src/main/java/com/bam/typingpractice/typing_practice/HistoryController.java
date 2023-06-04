@@ -27,6 +27,8 @@ public class HistoryController implements Initializable {
     public TableColumn<PlayerHistory,Integer> modeCol;
     @FXML
     public Button btn_back;
+    @FXML
+    public Button btn_barChart;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -37,6 +39,7 @@ public class HistoryController implements Initializable {
         playtimeCol.setCellValueFactory(new PropertyValueFactory<>("playTime"));
         modeCol.setCellValueFactory(new PropertyValueFactory<>("gameMode"));
         btn_back.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sample.fxml","Main Menu",null,null));
+        btn_barChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"bar-chart.fxml","Bar Chart",null,null));
         DBUtils.userHistory(Player.userId,histTable);
     }
 }
