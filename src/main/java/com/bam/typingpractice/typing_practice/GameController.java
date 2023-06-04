@@ -182,8 +182,10 @@ public class GameController implements Initializable {
             else {
                 if (timer == -1) {
                     userWord.setDisable(true);
-                    pane_basis.setStyle("-fx-background-color: #0a1931;");
                     userWord.setText("Game over");
+                    programWord.setFill(Color.WHEAT);
+                    secondProgramWord.setFill(Color.WHEAT);
+                    pane_basis.setStyle("-fx-background-color: #0a1931;");
 
                     try {
                         FileWriter myWriter = new FileWriter(saveData);

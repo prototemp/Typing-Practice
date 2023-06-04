@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="pane_basis" prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.GameController">
     <Circle fill="WHITE" layoutX="215.0" layoutY="84.0" radius="39.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-    <Text fx:id="seconds" layoutX="194.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="42.64990234375">
+    <Text fx:id="seconds" layoutX="186.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="57.814453125">
         <font>
             <Font name="Calibri" size="31.0" />
         </font>
