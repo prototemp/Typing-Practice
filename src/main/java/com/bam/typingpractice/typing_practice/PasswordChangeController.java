@@ -1,7 +1,5 @@
 package com.bam.typingpractice.typing_practice;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

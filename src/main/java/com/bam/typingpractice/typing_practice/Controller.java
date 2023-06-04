@@ -8,15 +8,12 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 public class Controller implements Initializable {
 
@@ -50,16 +47,7 @@ public class Controller implements Initializable {
         pilihWaktu.getItems().addAll(waktu);
         pilihLevel.getItems().addAll(level);
         DBUtils.getSumWords(Player.userId);
-        if (newFile.length() != 0) {
-            Scanner reader = null;
-            try {
-                reader = new Scanner(newFile);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            displayUsername.setText("Welcome, "+ Player.username);
-        }
-
+        displayUsername.setText("Welcome, "+ Player.username);
         // set the day
         Date date = new Date();
         Locale locale = new Locale("id");
@@ -75,7 +63,7 @@ public class Controller implements Initializable {
     }
 
 
-    public void playGame(ActionEvent ddd) throws IOException {
+    public void playGame(ActionEvent ddd) {
         File newFile = new File("username.txt");
         if (newFile.length() == 0) {
             DBUtils.changeScene(ddd,"popup.fxml","Typing Practice",null,null);
@@ -96,14 +84,14 @@ public class Controller implements Initializable {
         }
 
     }
-    public void wikiGame(ActionEvent ddd) throws IOException {
+    public void wikiGame(ActionEvent ddd) {
         DBUtils.changeScene(ddd,"wiki.fxml","Wiki",null,null);
     }
-    public void settings(ActionEvent ddd) throws IOException {
+    public void settings(ActionEvent ddd) {
         DBUtils.changeScene(ddd,"settings.fxml","Settings",null,null);
     }
 
-    public void historyTable(ActionEvent ddd) throws IOException {
+    public void historyTable(ActionEvent ddd) {
         DBUtils.changeScene(ddd,"history.fxml","History",null,null);
     }
 
