@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.LoggedInController">
+   <children>
+      <Label fx:id="label_welcome" layoutX="186.0" layoutY="46.0" text="Welcome! User" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_logout" layoutX="236.0" layoutY="181.0" mnemonicParsing="false" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Logout" textFill="#ffc947">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></Button>
+      <Label fx:id="label_frasa" alignment="CENTER" layoutX="67.0" layoutY="84.0" text="Frasa Pemulihan Passwordmu Yaitu: " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_lanjutkan" layoutX="217.0" layoutY="220.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Lanjutkan" textFill="#ffc947">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_erase" layoutX="218.0" layoutY="336.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Hapus Akun" textFill="#ffc947">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_gantiPassword" layoutX="206.0" layoutY="258.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Ganti Password" textFill="#ffc947">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_gantiFrasa" layoutX="206.0" layoutY="297.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Ganti Frasa" textFill="#ffc947">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="label_frasaUser" alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="124.0" text="x" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.PopupController">
+    <children>
+        <Text layoutX="103.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepertinya ini adalah pertama kalinya Anda menggunakan Type Practice" textAlignment="CENTER" wrappingWidth="390.1329040527344">
+            <font>
+                <Font name="Calibri" size="25.0" />
+            </font>
+        </Text>
+        <Text layoutX="142.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masukkan Username:" textAlignment="CENTER" wrappingWidth="312.1329345703125">
+            <font>
+                <Font name="Calibri" size="25.0" />
+            </font>
+        </Text>
+        <TextField fx:id="username" layoutX="224.0" layoutY="224.0" promptText="Name" />
+        <Button layoutX="272.0" layoutY="286.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+    </children>
+</AnchorPane>

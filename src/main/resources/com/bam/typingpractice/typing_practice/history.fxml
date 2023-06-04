@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.HistoryController">
+   <children>
+      <Button fx:id="btn_back" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="133.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Kembali" textAlignment="CENTER" textFill="#ffc947">
+         <font>
+            <Font name="Calibri" size="23.0" />
+         </font>
+      </Button>
+      <TableView fx:id="histTable" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="741.0">
+         <columns>
+            <TableColumn fx:id="nameCol" prefWidth="100.0" text="Username" />
+            <TableColumn fx:id="sumCol" prefWidth="90.0" text="Total Kata" />
+            <TableColumn fx:id="trueCol" prefWidth="90.0" text="Kata Benar" />
+            <TableColumn fx:id="falseCol" prefWidth="90.0" text="Kata Salah" />
+            <TableColumn fx:id="playtimeCol" prefWidth="140.0" text="Waktu Bermain" />
+            <TableColumn fx:id="modeCol" prefWidth="90.0" text="Game Mode" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
