@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Player {
     public static String username;
+    public static String frasa;
     public static int userId = 0;
     public static int gameMode = 0;
     public static int sessionWords = 0;

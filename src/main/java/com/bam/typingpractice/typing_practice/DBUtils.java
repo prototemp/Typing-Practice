@@ -128,6 +128,7 @@ public class DBUtils {
                     String retrievedFrasa = resultSet.getString("frasa");
                     if (retrievedPassword.equals(password)){
                         changeScene(event,"logged-in.fxml","Log-in",username,retrievedFrasa);
+                        Player.frasa = retrievedFrasa;
                     } else {
                         System.out.println("Password did not match!");
                         Alert alert = new Alert(Alert.AlertType.ERROR);

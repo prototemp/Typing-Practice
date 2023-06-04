@@ -26,17 +26,12 @@ public class SettingsController implements Initializable {
     private Label label_frasa;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        label_welcome.setText("Welcome! " + Player.username);
+        label_frasaUser.setText(Player.frasa);
         btn_logout.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"landing.fxml","Logged in!", null, null));
         btn_gantiFrasa.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"frasa-change.fxml","Frasa Change!", null, null));
         btn_lanjutkan.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sample.fxml","Typing Practice",null,null));
         btn_erase.setOnAction(actionEvent -> DBUtils.deleteUser(actionEvent,Player.username));
         btn_gantiPassword.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"password-change.fxml","Password Change!", null, null));
-    }
-
-    public void setUserInfo(String username, String frasa){
-        label_welcome.setText("Welcome! " + username);
-        label_frasaUser.setText(frasa);
-        Player.username = username;
-//        Player.userId = DBUtils.getUserId(username);
     }
 }
