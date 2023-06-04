@@ -5,7 +5,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.HistoryController">
-   <Button fx:id="btn_back" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Kembali" textAlignment="CENTER" textFill="#ffc947">
+   <Button fx:id="btn_back" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="106.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Kembali" textAlignment="CENTER" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="23.0" />
       </font>
@@ -20,7 +20,12 @@
          <TableColumn fx:id="modeCol" prefWidth="100.0" text="Game Mode" />
       </columns>
    </TableView>
-   <Button fx:id="btn_barChart" alignment="CENTER" layoutX="147.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="129.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Bar Chart" textAlignment="CENTER" textFill="#ffc947">
+   <Button fx:id="btn_barChart" alignment="CENTER" layoutX="129.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Bar Chart" textAlignment="CENTER" textFill="#ffc947">
+      <font>
+         <Font name="Calibri" size="23.0" />
+      </font>
+   </Button>
+   <Button fx:id="btn_lineChart" alignment="CENTER" layoutX="257.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Line Chart" textAlignment="CENTER" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="23.0" />
       </font>

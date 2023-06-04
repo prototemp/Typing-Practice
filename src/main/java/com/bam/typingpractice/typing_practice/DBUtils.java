@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
@@ -536,7 +537,66 @@ public class DBUtils {
             }
         }
     }
-    public static void userHistoryChart(int userid, BarChart<String,Integer> histChart){
+    public static void userHistoryBarChart(int userid, BarChart<String,Integer> histChart){
+        Connection connection = null;
+        PreparedStatement psLogin = null;
+        ResultSet resultSet = null;
+        XYChart.Series<String, Integer> series1 = new XYChart.Series<>();
+        XYChart.Series<String, Integer> series2 = new XYChart.Series<>();
+        XYChart.Series<String, Integer> series3 = new XYChart.Series<>();
+        try {
+            connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DBNAME),USERNAME,PASSWORD);
+            psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
+            psLogin.setInt(1, userid);
+            resultSet = psLogin.executeQuery();
+            if (!resultSet.isBeforeFirst()){
+                System.out.println("User never playing");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Provided cridentials are incorrect!");
+                alert.show();
+
+            } else {
+                while (resultSet.next()){
+                    int retrievedSumWords = Integer.parseInt(resultSet.getString("sum_words"));
+                    int retrievedTrueWords = Integer.parseInt(resultSet.getString("true_words"));
+                    int retrievedFalseWords = Integer.parseInt(resultSet.getString("false_words"));
+                    String retrievedHistory = resultSet.getString("history");
+                    series1.setName("True Words");
+                    series2.setName("False Words");
+                    series3.setName("Sum Words");
+                    series1.getData().add(new XYChart.Data<>(retrievedHistory,retrievedTrueWords));
+                    series2.getData().add(new XYChart.Data<>(retrievedHistory,retrievedFalseWords));
+                    series3.getData().add(new XYChart.Data<>(retrievedHistory,retrievedSumWords));
+                }
+                histChart.getData().addAll(series1,series2,series3);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (resultSet != null){
+                try{
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(psLogin != null){
+                try {
+                    psLogin.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null){
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    public static void userHistoryLineChart(int userid, LineChart<String,Integer> histChart){
         Connection connection = null;
         PreparedStatement psLogin = null;
         ResultSet resultSet = null;

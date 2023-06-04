@@ -29,6 +29,8 @@ public class HistoryController implements Initializable {
     public Button btn_back;
     @FXML
     public Button btn_barChart;
+    @FXML
+    public Button btn_lineChart;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,6 +42,7 @@ public class HistoryController implements Initializable {
         modeCol.setCellValueFactory(new PropertyValueFactory<>("gameMode"));
         btn_back.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sample.fxml","Main Menu",null,null));
         btn_barChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"bar-chart.fxml","Bar Chart",null,null));
+        btn_lineChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"line-chart.fxml","Bar Chart",null,null));
         DBUtils.userHistory(Player.userId,histTable);
     }
 }

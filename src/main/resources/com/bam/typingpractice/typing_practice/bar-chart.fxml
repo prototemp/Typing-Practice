@@ -24,4 +24,9 @@
          <Font name="Calibri" size="23.0" />
       </font>
    </Button>
+    <Button fx:id="btn_lineChart" alignment="CENTER" layoutX="257.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Line Chart" textAlignment="CENTER" textFill="#ffc947">
+        <font>
+            <Font name="Calibri" size="23.0" />
+        </font>
+    </Button>
 </AnchorPane>

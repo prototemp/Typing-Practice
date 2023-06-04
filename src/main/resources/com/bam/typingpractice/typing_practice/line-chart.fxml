@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.LineChartController">
+   <Button fx:id="btn_back" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="109.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Kembali" textAlignment="CENTER" textFill="#ffc947">
+      <font>
+         <Font name="Calibri" size="23.0" />
+      </font>
+   </Button>
+   <Button fx:id="btn_table" alignment="CENTER" layoutX="131.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="109.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Tabel" textAlignment="CENTER" textFill="#ffc947">
+      <font>
+         <Font name="Calibri" size="23.0" />
+      </font>
+   </Button>
+    <Button fx:id="btn_barChart" alignment="CENTER" layoutX="248.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Bar Chart" textAlignment="CENTER" textFill="#ffc947">
+        <font>
+            <Font name="Calibri" size="23.0" />
+        </font>
+    </Button>
+   <LineChart fx:id="histLineChart" layoutX="1.0" layoutY="57.0" prefHeight="504.0" prefWidth="700.0">
+     <xAxis>
+       <CategoryAxis side="BOTTOM" />
+     </xAxis>
+     <yAxis>
+       <NumberAxis side="LEFT" />
+     </yAxis>
+   </LineChart>
+</AnchorPane>
