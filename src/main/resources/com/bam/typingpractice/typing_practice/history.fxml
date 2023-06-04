@@ -30,4 +30,9 @@
          <Font name="Calibri" size="23.0" />
       </font>
    </Button>
+   <Button fx:id="btn_areaChart" alignment="CENTER" layoutX="392.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="132.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Area Chart" textAlignment="CENTER" textFill="#ffc947">
+      <font>
+         <Font name="Calibri" size="23.0" />
+      </font>
+   </Button>
 </AnchorPane>
