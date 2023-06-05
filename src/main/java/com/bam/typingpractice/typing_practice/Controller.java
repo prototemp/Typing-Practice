@@ -13,6 +13,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -47,7 +48,7 @@ public class Controller implements Initializable {
     @FXML
     private ChoiceBox<String> pilihLevel;
     private final Integer[] waktu = {10,30,60,120};
-    private final String[] level = {"Mudah", "Sedang", "Sulit"};
+    private final String[] level = {"Mudah", "Sedang", "Sulit", "Random"};
 
     public static String levelPilihan;
     public static Integer waktuPilihan;
@@ -84,9 +85,21 @@ public class Controller implements Initializable {
         levelPilihan = pilihLevel.getValue();
         waktuPilihan = pilihWaktu.getValue();
 
-        if (waktuPilihan == null || levelPilihan == null) {
+        if (pilihLevel.getValue().equals("Random")){
+            Random random = new Random();
+            int levelRand = random.nextInt(3);
+            levelPilihan = level[levelRand];
+        }
+
+        if (levelPilihan == null) {
             DBUtils.changeScene(ddd,"empty.fxml","Typing Practice",null,null);
-        } else {
+        }
+
+        if (waktuPilihan == null) {
+            waktuPilihan = 100000;
+        }
+
+        if (levelPilihan != null) {
             modCapital = checkCapital.isSelected();
             modNumber = checkNumber.isSelected();
             modReverse = checkReverse.isSelected();

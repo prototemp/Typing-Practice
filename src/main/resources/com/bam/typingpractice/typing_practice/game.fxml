@@ -38,17 +38,17 @@
             <Font name="Calibri" size="31.0" />
         </font>
     </Text>
-    <TextField fx:id="userWord" alignment="CENTER" layoutX="211.0" layoutY="212.0" onKeyPressed="#startGame" prefHeight="42.0" prefWidth="214.0">
+    <TextField fx:id="userWord" alignment="CENTER" layoutX="174.0" layoutY="212.0" onKeyPressed="#startGame" prefHeight="42.0" prefWidth="281.0">
         <font>
             <Font name="Hack Regular" size="21.0" />
         </font>
     </TextField>
-    <Text fx:id="programWord" fill="#ffc947" layoutX="226.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="word" textAlignment="CENTER" wrappingWidth="184.74749755859375">
+    <Text fx:id="programWord" fill="#ffc947" layoutX="216.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="word" textAlignment="CENTER" wrappingWidth="184.74749755859375">
         <font>
             <Font name="Hack Bold" size="21.0" />
         </font>
     </Text>
-    <Text fx:id="secondProgramWord" fill="#ffc84766" layoutX="402.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="word" textAlignment="CENTER" wrappingWidth="184.74749755859375">
+    <Text fx:id="secondProgramWord" fill="#ffc84766" layoutX="412.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="word" textAlignment="CENTER" wrappingWidth="184.74749755859375">
         <font>
             <Font name="Hack Regular" size="21.0" />
         </font>
@@ -64,7 +64,7 @@
             <Font name="Calibri" size="23.0" />
         </font>
     </Button>
-    <Button fx:id="btn_stop" alignment="CENTER" layoutX="260.0" layoutY="360.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="137.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="STOP" textAlignment="CENTER" textFill="#ffc947">
+    <Button fx:id="btn_stop" alignment="CENTER" layoutX="250.0" layoutY="350.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="137.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="STOP" textAlignment="CENTER" textFill="#ffc947">
         <font>
           <Font name="Calibri" size="23.0" />
         </font>
