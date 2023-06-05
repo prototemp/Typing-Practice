@@ -60,6 +60,7 @@ public class GameController implements Initializable {
 
     // add words to array list
     public void addToList() {
+        char[] symbol = {'~' ,'`' ,'!' ,'@' ,'#' ,'$' ,'%' ,'^' ,'&' ,'*' ,'(' ,')' ,'-' ,'_' ,'+' ,'=' ,'{' ,'}' ,'[' ,']' ,'|' ,'\\' ,'/' ,':' ,';' ,'"' ,'\'' ,'<' ,'>' ,',' ,'.' ,'?'};
         BufferedReader reader;
         try {
             if(Objects.equals(Controller.levelPilihan, "Sulit")){
@@ -90,6 +91,25 @@ public class GameController implements Initializable {
                         int c = random.nextInt(10);
                         if (random.nextBoolean()) {
                             strTmp.insert(i,c);
+                        }
+                    }
+                    line = String.valueOf(strTmp);
+                }
+                if (Controller.modReverse){
+                    StringBuilder strTmp = new StringBuilder(line);
+                        Random random = new Random();
+                        if (random.nextBoolean()) {
+                            strTmp.reverse();
+                        }
+                    line = String.valueOf(strTmp);
+                }
+                if (Controller.modSymbol){
+                    StringBuilder strTmp = new StringBuilder(line);
+                    for (int i = 0; i <= line.length(); i++) {
+                        Random random = new Random();
+                        int c = random.nextInt(32);
+                        if (random.nextBoolean()) {
+                            strTmp.insert(i,symbol[c]);
                         }
                     }
                     line = String.valueOf(strTmp);

@@ -22,6 +22,10 @@ public class Controller implements Initializable {
     @FXML
     public CheckBox checkNumber;
     @FXML
+    public CheckBox checkReverse;
+    @FXML
+    public CheckBox checkSymbol;
+    @FXML
     private Label timeLabel;
     @FXML
     private Label displayUsername;
@@ -45,6 +49,8 @@ public class Controller implements Initializable {
     public static Integer waktuPilihan;
     public static boolean modCapital;
     public static boolean modNumber;
+    public static boolean modReverse;
+    public static boolean modSymbol;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -77,6 +83,8 @@ public class Controller implements Initializable {
         } else {
             modCapital = checkCapital.isSelected();
             modNumber = checkNumber.isSelected();
+            modReverse = checkReverse.isSelected();
+            modSymbol = checkSymbol.isSelected();
             DBUtils.changeScene(ddd, "game.fxml", "Typing Practice", null, null);
             if (waktuPilihan == 10) Player.gameMode = DBUtils.getModeId("10 Seconds");
             else if (waktuPilihan == 30) Player.gameMode = DBUtils.getModeId("30 Seconds");

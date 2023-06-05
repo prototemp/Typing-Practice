@@ -30,40 +30,40 @@
             </font>
         </Button>
         <ChoiceBox fx:id="pilihWaktu" layoutX="90.0" layoutY="290.0" prefWidth="150.0" />
-        <Label alignment="CENTER" layoutX="228.0" layoutY="361.0" prefHeight="19.0" prefWidth="245.0" text="Overall data" textAlignment="CENTER" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="228.0" layoutY="372.0" prefHeight="19.0" prefWidth="245.0" text="Overall data" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="24.0" />
             </font>
         </Label>
-        <Circle fill="#ffffff00" layoutX="228.0" layoutY="448.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-        <Text fill="WHITE" layoutX="193.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total entered">
+        <Circle fill="#ffffff00" layoutX="228.0" layoutY="458.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
+        <Text fill="WHITE" layoutX="193.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total entered">
             <font>
                 <Font name="Calibri" size="13.0" />
             </font>
         </Text>
-        <Text fx:id="total" fill="WHITE" layoutX="198.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
+        <Text fx:id="total" fill="WHITE" layoutX="198.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
             <font>
                 <Font name="Calibri" size="36.0" />
             </font>
         </Text>
-        <Circle fill="#ffffff00" layoutX="350.0" layoutY="448.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-        <Text fill="WHITE" layoutX="310.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="average wpm" textAlignment="CENTER" wrappingWidth="80.30908203125">
+        <Circle fill="#ffffff00" layoutX="350.0" layoutY="458.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
+        <Text fill="WHITE" layoutX="310.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="average wpm" textAlignment="CENTER" wrappingWidth="80.30908203125">
             <font>
                 <Font name="Calibri" size="13.0" />
             </font>
         </Text>
-        <Text fx:id="wpm" fill="WHITE" layoutX="320.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
+        <Text fx:id="wpm" fill="WHITE" layoutX="320.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
             <font>
                 <Font name="Calibri" size="36.0" />
             </font>
         </Text>
-        <Circle fill="#ffffff00" layoutX="473.0" layoutY="448.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
-        <Text fill="WHITE" layoutX="456.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="invalid">
+        <Circle fill="#ffffff00" layoutX="473.0" layoutY="458.0" radius="45.0" stroke="#ffc947" strokeType="INSIDE" strokeWidth="3.0" />
+        <Text fill="WHITE" layoutX="456.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="invalid">
             <font>
                 <Font name="Calibri" size="13.0" />
             </font>
         </Text>
-        <Text fx:id="invalid" fill="WHITE" layoutX="443.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
+        <Text fx:id="invalid" fill="WHITE" layoutX="443.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="60.30908203125">
             <font>
                 <Font name="Calibri" size="36.0" />
             </font>
@@ -97,16 +97,26 @@
                 <Font name="Calibri" size="23.0" />
             </font>
         </Button>
-      <CheckBox fx:id="checkCapital" layoutX="295.0" layoutY="282.0" mnemonicParsing="false" text="Capital" textFill="WHITE">
+      <CheckBox fx:id="checkCapital" layoutX="295.0" layoutY="272.0" mnemonicParsing="false" text="Capital" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="18.0" />
          </font></CheckBox>
-      <Label alignment="CENTER" layoutX="289.0" layoutY="251.0" prefHeight="28.0" prefWidth="110.0" text="Modifier: " textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="289.0" layoutY="239.0" prefHeight="28.0" prefWidth="110.0" text="Modifier: " textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Calibri" size="24.0" />
          </font>
       </Label>
-      <CheckBox fx:id="checkNumber" layoutX="295.0" layoutY="305.0" mnemonicParsing="false" text="Number" textFill="WHITE">
+      <CheckBox fx:id="checkNumber" layoutX="295.0" layoutY="295.0" mnemonicParsing="false" text="Number" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkReverse" layoutX="295.0" layoutY="319.0" mnemonicParsing="false" text="Reverse" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkSymbol" layoutX="295.0" layoutY="343.0" mnemonicParsing="false" text="Symbol" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="18.0" />
          </font>
