@@ -315,7 +315,7 @@ public class DBUtils {
             resultSet = psCheckExist.executeQuery();
 
             if (!resultSet.isBeforeFirst()){
-                 Alert alert = new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Insert correct username");
                 alert.show();
             } else {
@@ -367,14 +367,16 @@ public class DBUtils {
         Connection connection = null;
         PreparedStatement psInsert = null;
         try {
-            connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DBNAME),USERNAME,PASSWORD);
-            psInsert = connection.prepareStatement("INSERT INTO players_score(sum_words,true_words,false_words,history,user_id,mode_id) VALUES(?,?,?,now(),?,?)");
-            psInsert.setInt(1,sumWords);
-            psInsert.setInt(2,trueWords);
-            psInsert.setInt(3, (sumWords-trueWords));
-            psInsert.setInt(4,userId);
-            psInsert.setInt(5,mode);
-            psInsert.executeUpdate();
+            if (sumWords != 0) {
+                connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s", HOST, PORT, DBNAME), USERNAME, PASSWORD);
+                psInsert = connection.prepareStatement("INSERT INTO players_score(sum_words,true_words,false_words,history,user_id,mode_id) VALUES(?,?,?,now(),?,?)");
+                psInsert.setInt(1, sumWords);
+                psInsert.setInt(2, trueWords);
+                psInsert.setInt(3, (sumWords - trueWords));
+                psInsert.setInt(4, userId);
+                psInsert.setInt(5, mode);
+                psInsert.executeUpdate();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
