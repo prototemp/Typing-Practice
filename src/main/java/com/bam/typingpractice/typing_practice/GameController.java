@@ -14,7 +14,6 @@ import javafx.scene.text.Text;
 
 import java.io.*;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -23,7 +22,6 @@ import java.util.concurrent.TimeUnit;
 public class GameController implements Initializable {
     private int wordCounter = 0;
     private int first = 1;
-    private File saveData;
     private int countAll = 0;
     private int counter = 0;
 
@@ -123,21 +121,6 @@ public class GameController implements Initializable {
         secondProgramWord.setText(words.get(wordCounter+1));
         wordCounter++;
 
-
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
-        saveData = new File("src/data/"+formatter.format(date).strip()+".txt");
-
-        try {
-            if (saveData.createNewFile()) {
-                System.out.println("File created: " + saveData.getName());
-            } else {
-                System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         btn_stop.setOnAction(actionEvent -> timer = -1);
         playAgain.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"game.fxml","Typing Practice",null,null));
 
@@ -188,11 +171,6 @@ public class GameController implements Initializable {
                     pane_basis.setStyle("-fx-background-color: #0a1931;");
 
                     try {
-                        FileWriter myWriter = new FileWriter(saveData);
-                        myWriter.write(countAll +";");
-                        myWriter.write(counter +";");
-                        myWriter.write(String.valueOf(countAll-counter));
-                        myWriter.close();
                         Player.sessionWords = countAll;
                         Player.sessionTrueWords = counter;
                         Player.sessionFalseWords = countAll - counter;
