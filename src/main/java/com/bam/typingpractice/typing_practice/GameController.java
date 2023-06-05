@@ -10,6 +10,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 import java.io.*;
@@ -70,12 +71,18 @@ public class GameController implements Initializable {
             } else reader = new BufferedReader(new FileReader("wordsList_mudah"));
 
             String line = reader.readLine();
-
+            Random random = new Random();
+            if (Controller.modRandom){
+                if(!Controller.modDouble) Controller.modDouble = random.nextBoolean();
+                if(!Controller.modCapital) Controller.modCapital = random.nextBoolean();
+                if(!Controller.modNumber) Controller.modNumber = random.nextBoolean();
+                if(!Controller.modSymbol) Controller.modSymbol = random.nextBoolean();
+                if(!Controller.modReverse) Controller.modReverse = random.nextBoolean();
+            }
             while (line != null) {
                 if (Controller.modCapital){
                     StringBuilder strTmp = new StringBuilder(line);
                     for (int i = 0; i < line.length(); i++) {
-                        Random random = new Random();
                         char c = line.charAt(i);
                         if (random.nextBoolean()) {
                             c = Character.toUpperCase(c);
@@ -87,7 +94,6 @@ public class GameController implements Initializable {
                 if (Controller.modNumber){
                     StringBuilder strTmp = new StringBuilder(line);
                     for (int i = 0; i <= line.length(); i++) {
-                        Random random = new Random();
                         int c = random.nextInt(10);
                         if (random.nextBoolean()) {
                             strTmp.insert(i,c);
@@ -97,7 +103,6 @@ public class GameController implements Initializable {
                 }
                 if (Controller.modReverse){
                     StringBuilder strTmp = new StringBuilder(line);
-                        Random random = new Random();
                         if (random.nextBoolean()) {
                             strTmp.reverse();
                         }
@@ -106,10 +111,18 @@ public class GameController implements Initializable {
                 if (Controller.modSymbol){
                     StringBuilder strTmp = new StringBuilder(line);
                     for (int i = 0; i <= line.length(); i++) {
-                        Random random = new Random();
                         int c = random.nextInt(32);
                         if (random.nextBoolean()) {
                             strTmp.insert(i,symbol[c]);
+                        }
+                    }
+                    line = String.valueOf(strTmp);
+                }
+                if (Controller.modDouble){
+                    StringBuilder strTmp = new StringBuilder(line);
+                    for (int i = 0; i < line.length(); i++) {
+                        if (random.nextBoolean()) {
+                            strTmp.insert(i,line.charAt(i));
                         }
                     }
                     line = String.valueOf(strTmp);
@@ -163,6 +176,8 @@ public class GameController implements Initializable {
             }
             programWord.setFill(Color.DARKBLUE);
             secondProgramWord.setFill(Color.DARKBLUE);
+            programWord.setFont(Font.font("Hack",21));
+            secondProgramWord.setFont(Font.font("Hack",21));
         });
 
     }

@@ -29,7 +29,7 @@
                 <Font name="Calibri" size="23.0" />
             </font>
         </Button>
-        <ChoiceBox fx:id="pilihWaktu" layoutX="90.0" layoutY="290.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="pilihWaktu" layoutX="90.0" layoutY="250.0" prefWidth="150.0" />
         <Label alignment="CENTER" layoutX="228.0" layoutY="372.0" prefHeight="19.0" prefWidth="245.0" text="Overall data" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="24.0" />
@@ -71,13 +71,13 @@
         <ImageView fitHeight="28.0" fitWidth="22.0" layoutX="358.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@icon.png" />
         </ImageView>
-        <ChoiceBox fx:id="pilihLevel" layoutX="449.0" layoutY="288.0" prefWidth="150.0" />
-        <Label alignment="CENTER" layoutX="107.0" layoutY="251.0" prefHeight="28.0" prefWidth="110.0" text="Waktu:" textAlignment="CENTER" textFill="WHITE">
+        <ChoiceBox fx:id="pilihLevel" layoutX="89.0" layoutY="310.0" prefWidth="150.0" />
+        <Label alignment="CENTER" layoutX="107.0" layoutY="221.0" prefHeight="28.0" prefWidth="110.0" text="Waktu:" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="24.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="477.0" layoutY="250.0" prefHeight="28.0" prefWidth="90.0" text="Level:" textAlignment="CENTER" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="117.0" layoutY="280.0" prefHeight="28.0" prefWidth="90.0" text="Level:" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="24.0" />
             </font>
@@ -97,26 +97,36 @@
                 <Font name="Calibri" size="23.0" />
             </font>
         </Button>
-      <CheckBox fx:id="checkCapital" layoutX="295.0" layoutY="272.0" mnemonicParsing="false" text="Capital" textFill="WHITE">
+      <CheckBox fx:id="checkCapital" layoutX="497.0" layoutY="249.0" mnemonicParsing="false" text="Capital" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="18.0" />
          </font></CheckBox>
-      <Label alignment="CENTER" layoutX="289.0" layoutY="239.0" prefHeight="28.0" prefWidth="110.0" text="Modifier: " textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="459.0" layoutY="219.0" prefHeight="28.0" prefWidth="110.0" text="Modifier: " textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Calibri" size="24.0" />
          </font>
       </Label>
-      <CheckBox fx:id="checkNumber" layoutX="295.0" layoutY="295.0" mnemonicParsing="false" text="Number" textFill="WHITE">
+      <CheckBox fx:id="checkNumber" layoutX="497.0" layoutY="272.0" mnemonicParsing="false" text="Number" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="18.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="checkReverse" layoutX="295.0" layoutY="319.0" mnemonicParsing="false" text="Reverse" textFill="WHITE">
+      <CheckBox fx:id="checkReverse" layoutX="385.0" layoutY="248.0" mnemonicParsing="false" text="Reverse" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="18.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="checkSymbol" layoutX="295.0" layoutY="343.0" mnemonicParsing="false" text="Symbol" textFill="WHITE">
+      <CheckBox fx:id="checkSymbol" layoutX="385.0" layoutY="272.0" mnemonicParsing="false" text="Symbol" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkDouble" layoutX="385.0" layoutY="296.0" mnemonicParsing="false" text="Double" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkRandom" layoutX="497.0" layoutY="296.0" mnemonicParsing="false" text="Random" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="18.0" />
          </font>
