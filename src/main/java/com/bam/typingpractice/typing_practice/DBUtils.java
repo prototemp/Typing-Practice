@@ -549,7 +549,7 @@ public class DBUtils {
             }
         }
     }
-    public static List<XYChart.Series<String, Integer>> userHistoryChart(int userid){
+    public static List<XYChart.Series<String, Integer>> userHistoryChart(int userid, int modeId){
         Connection connection = null;
         PreparedStatement psLogin = null;
         ResultSet resultSet = null;
@@ -560,8 +560,15 @@ public class DBUtils {
         }
         try {
             connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DBNAME),USERNAME,PASSWORD);
-            psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
-            psLogin.setInt(1, userid);
+            if (modeId == 0 || modeId >= 5) {
+                psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
+                psLogin.setInt(1, userid);
+            }
+            else {
+                psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ? AND mode_id = ?");
+                psLogin.setInt(1, userid);
+                psLogin.setInt(2, modeId);
+            }
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
