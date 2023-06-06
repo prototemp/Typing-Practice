@@ -3,9 +3,11 @@ package com.bam.typingpractice.typing_practice;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class AreaChartController implements Initializable {
@@ -23,10 +25,11 @@ public class AreaChartController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        List<XYChart.Series<String, Integer>> seriesList = DBUtils.userHistoryChart(Player.userId);
         btn_back.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sample.fxml","Main Menu",null,null));
         btn_table.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"history.fxml","Main Menu",null,null));
         btn_barChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"bar-chart.fxml","Main Menu",null,null));
         btn_lineChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"line-chart.fxml","Bar Chart",null,null));
-        DBUtils.userHistoryAreaChart(Player.userId,histAreaChart);
+        histAreaChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));
     }
 }
