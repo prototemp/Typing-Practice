@@ -34,7 +34,5 @@ public class LoggedInController implements Initializable {
     public void setUserInfo(String username, String frasa){
         label_welcome.setText("Welcome! " + username);
         label_frasaUser.setText(frasa);
-        Player.username = username;
-        Player.userId = DBUtils.getUserId(username);
     }
 }

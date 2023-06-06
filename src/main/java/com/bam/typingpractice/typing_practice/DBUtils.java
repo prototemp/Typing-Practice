@@ -131,6 +131,8 @@ public class DBUtils {
                     if (retrievedPassword.equals(password)){
                         changeScene(event,"logged-in.fxml","Log-in",username,retrievedFrasa);
                         Player.frasa = retrievedFrasa;
+                        Player.username = username;
+                        Player.userId = DBUtils.getUserId(username);
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Provided cridentials are incorrect!");
