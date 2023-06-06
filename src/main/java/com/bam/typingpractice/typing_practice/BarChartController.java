@@ -39,13 +39,14 @@ public class BarChartController implements Initializable {
             seriesList = DBUtils.userHistoryChart(Player.userId,0);
         }
         else {
-            seriesList = DBUtils.userHistoryChart(Player.userId,DBUtils.getModeId(PlayerHistory.historyState));
+            seriesList = DBUtils.userHistoryChart(Player.userId,PlayerHistory.historyStateInt);
         }
         histBarChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));
         pilihWaktu.setOnAction(actionEvent -> {
             histBarChart.getData().clear();
             int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
             PlayerHistory.historyState = pilihWaktu.getValue();
+            PlayerHistory.historyStateInt = selectedIndex;
             if (selectedIndex != 5) {
                 seriesList = DBUtils.userHistoryChart(Player.userId, selectedIndex);
                 histBarChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));

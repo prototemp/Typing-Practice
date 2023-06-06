@@ -55,11 +55,14 @@ public class HistoryController implements Initializable {
         btn_areaChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"area-chart.fxml","Bar Chart",null,null));
         if(PlayerHistory.historyState == null || PlayerHistory.historyState.equals("All")){
             DBUtils.userHistory(Player.userId,histTable,0);
+        } else {
+            DBUtils.userHistory(Player.userId,histTable,PlayerHistory.historyStateInt);
         }
         pilihWaktu.setOnAction(actionEvent -> {
             histTable.getItems().clear();
             int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
             PlayerHistory.historyState = pilihWaktu.getValue();
+            PlayerHistory.historyStateInt = selectedIndex;
             if (selectedIndex != 5) DBUtils.userHistory(Player.userId,histTable,selectedIndex);
         });
     }

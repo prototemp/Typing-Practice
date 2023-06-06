@@ -39,13 +39,14 @@ public class AreaChartController implements Initializable {
             seriesList = DBUtils.userHistoryChart(Player.userId,0);
         }
         else {
-            seriesList = DBUtils.userHistoryChart(Player.userId,DBUtils.getModeId(PlayerHistory.historyState));
+            seriesList = DBUtils.userHistoryChart(Player.userId,PlayerHistory.historyStateInt);
         }
         histAreaChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));
         pilihWaktu.setOnAction(actionEvent -> {
             histAreaChart.getData().clear();
             int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
             PlayerHistory.historyState = pilihWaktu.getValue();
+            PlayerHistory.historyStateInt = selectedIndex;
             if (selectedIndex != 5) {
                 seriesList = DBUtils.userHistoryChart(Player.userId, selectedIndex);
                 histAreaChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));

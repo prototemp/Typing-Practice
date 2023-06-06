@@ -37,13 +37,14 @@ public class LineChartController implements Initializable {
         if (PlayerHistory.historyState == null || PlayerHistory.historyState.equals("All")) {
             seriesList = DBUtils.userHistoryChart(Player.userId, 0);
         } else {
-            seriesList = DBUtils.userHistoryChart(Player.userId, DBUtils.getModeId(PlayerHistory.historyState));
+            seriesList = DBUtils.userHistoryChart(Player.userId,PlayerHistory.historyStateInt);
         }
         histLineChart.getData().addAll(seriesList.get(0), seriesList.get(1), seriesList.get(2));
         pilihWaktu.setOnAction(actionEvent -> {
             histLineChart.getData().clear();
             int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
             PlayerHistory.historyState = pilihWaktu.getValue();
+            PlayerHistory.historyStateInt = selectedIndex;
             if (selectedIndex != 5) {
                 seriesList = DBUtils.userHistoryChart(Player.userId, selectedIndex);
                 histLineChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));

@@ -12,6 +12,7 @@ public class PlayerHistory {
     public String playTime;
     public static String[] waktu = {"10 Seconds","30 Seconds","60 Seconds","120 Seconds","Endless", "All"};
     public static String historyState;
+    public static int historyStateInt;
 
     public PlayerHistory(int userId, int gameMode, int sessionWords, int sessionTrueWords, int sessionFalseWords, String playTime, int playId) {
         this.username = Player.username;
