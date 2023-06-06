@@ -408,7 +408,7 @@ public class DBUtils {
             resultSet = psInsert.executeQuery();
             if (!resultSet.isBeforeFirst()){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided cridentials are incorrect!");
+                alert.setContentText("No User Id Found!");
                 alert.show();
 
             } else {
@@ -455,7 +455,7 @@ public class DBUtils {
             resultSet = psInsert.executeQuery();
             if (!resultSet.isBeforeFirst()){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided cridentials are incorrect!");
+                alert.setContentText("No Mode Id Found!");
                 alert.show();
 
             } else {
@@ -507,8 +507,8 @@ public class DBUtils {
             }
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided cridentials are incorrect!");
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("Empty Data To Show In The Table!");
                 alert.show();
 
             } else {
@@ -571,8 +571,8 @@ public class DBUtils {
             }
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided cridentials are incorrect!");
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("Empty Data To Show In The Chart!");
                 alert.show();
 
             } else {
@@ -641,7 +641,7 @@ public class DBUtils {
             }
             if (!resultSet.isBeforeFirst()){
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided cridentials are incorrect!");
+                alert.setContentText("No Game History Found, Press Play In The Main Menu to Play!");
                 alert.show();
 
             } else {
