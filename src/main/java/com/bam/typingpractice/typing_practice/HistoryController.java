@@ -27,6 +27,8 @@ public class HistoryController implements Initializable {
     @FXML
     public TableColumn<PlayerHistory,Integer> modeCol;
     @FXML
+    public TableColumn<PlayerHistory,Integer> playIdCol;
+    @FXML
     public Button btn_back;
     @FXML
     public Button btn_barChart;
@@ -46,6 +48,7 @@ public class HistoryController implements Initializable {
         falseCol.setCellValueFactory(new PropertyValueFactory<>("sessionFalseWords"));
         playtimeCol.setCellValueFactory(new PropertyValueFactory<>("playTime"));
         modeCol.setCellValueFactory(new PropertyValueFactory<>("gameMode"));
+        playIdCol.setCellValueFactory(new PropertyValueFactory<>("playId"));
         btn_back.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"sample.fxml","Main Menu",null,null));
         btn_barChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"bar-chart.fxml","Bar Chart",null,null));
         btn_lineChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"line-chart.fxml","Bar Chart",null,null));

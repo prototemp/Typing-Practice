@@ -519,7 +519,8 @@ public class DBUtils {
                     String retrievedHistory = resultSet.getString("history");
                     int retrievedUserId = Integer.parseInt(resultSet.getString("user_id"));
                     int retrievedMode = Integer.parseInt(resultSet.getString("mode_id"));
-                    histTable.getItems().add(new PlayerHistory(retrievedUserId,retrievedMode,retrievedSumWords,retrievedTrueWords,retrievedFalseWords,retrievedHistory));
+                    int retrievedPlayId = Integer.parseInt(resultSet.getString("play_id"));
+                    histTable.getItems().add(new PlayerHistory(retrievedUserId,retrievedMode,retrievedSumWords,retrievedTrueWords,retrievedFalseWords,retrievedHistory,retrievedPlayId));
                 }
             }
         } catch (SQLException e) {

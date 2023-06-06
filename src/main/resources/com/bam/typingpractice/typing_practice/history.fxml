@@ -15,9 +15,10 @@
          <TableColumn fx:id="nameCol" prefWidth="100.0" text="Username" />
          <TableColumn fx:id="sumCol" prefWidth="100.0" text="Total Kata" />
          <TableColumn fx:id="trueCol" prefWidth="100.0" text="Kata Benar" />
-         <TableColumn fx:id="falseCol" prefWidth="100.0" text="Kata Salah" />
-         <TableColumn fx:id="playtimeCol" prefWidth="140.0" text="Waktu Bermain" />
-         <TableColumn fx:id="modeCol" prefWidth="100.0" text="Game Mode" />
+         <TableColumn fx:id="falseCol" prefWidth="91.0" text="Kata Salah" />
+         <TableColumn fx:id="playtimeCol" prefWidth="135.0" text="Waktu Bermain" />
+         <TableColumn fx:id="modeCol" text="Game Mode" />
+         <TableColumn fx:id="playIdCol" prefWidth="134.0" text="Play Id" />
       </columns>
    </TableView>
    <Button fx:id="btn_barChart" alignment="CENTER" layoutX="129.0" layoutY="14.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Bar Chart" textAlignment="CENTER" textFill="#ffc947">

@@ -8,10 +8,12 @@ public class PlayerHistory {
     public int sessionWords;
     public int sessionTrueWords;
     public int sessionFalseWords;
+    public int playId;
     public String playTime;
     public static String[] waktu = {"10 Seconds","30 Seconds","60 Seconds","120 Seconds","Endless", "All"};
     public static String historyState;
-    public PlayerHistory(int userId, int gameMode, int sessionWords, int sessionTrueWords, int sessionFalseWords, String playTime) {
+
+    public PlayerHistory(int userId, int gameMode, int sessionWords, int sessionTrueWords, int sessionFalseWords, String playTime, int playId) {
         this.username = Player.username;
         this.userId = userId;
         this.gameMode = gameMode;
@@ -19,6 +21,7 @@ public class PlayerHistory {
         this.sessionTrueWords = sessionTrueWords;
         this.sessionFalseWords = sessionFalseWords;
         this.playTime = playTime;
+        this.playId = playId;
     }
 
     public String getUsername() {
@@ -75,5 +78,7 @@ public class PlayerHistory {
 
     public void setPlayTime(String playTime) {
         this.playTime = playTime;
+    }   public int getPlayId() {
+        return playId;
     }
 }
