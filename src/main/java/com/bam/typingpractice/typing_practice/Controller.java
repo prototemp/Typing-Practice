@@ -9,9 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -67,12 +66,12 @@ public class Controller implements Initializable {
         DBUtils.getSumWords(Player.userId);
         displayUsername.setText("Welcome, "+ Player.username);
         // set the day
-        Date date = new Date();
         Locale locale = new Locale("id");
-        DateFormat formatter = new SimpleDateFormat("EEEE", locale);
-        String strDay = formatter.format(date);
+        LocalDateTime myDateObj = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("EEEE, dd MMM yyyy HH:mm:ss",locale);
+        String formattedDate = myDateObj.format(myFormatObj);
 
-        timeLabel.setText("Hari ini " + strDay);
+        timeLabel.setText(formattedDate);
 
         // we need to display data
         total.setText(String.valueOf(Player.sumWords));

@@ -19,7 +19,7 @@
                 <Font name="Calibri" size="35.0" />
             </font>
         </Label>
-        <Label fx:id="timeLabel" layoutX="212.0" layoutY="67.0" prefHeight="35.0" prefWidth="276.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE">
+        <Label fx:id="timeLabel" layoutX="150.0" layoutY="67.0" prefHeight="35.0" prefWidth="385.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="30.0" />
             </font>
