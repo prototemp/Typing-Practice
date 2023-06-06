@@ -490,14 +490,21 @@ public class DBUtils {
         }
         return ret;
     }
-    public static void userHistory(int userid, TableView<PlayerHistory> histTable){
+
+    public static void userHistory(int userid, TableView<PlayerHistory> histTable,int modeId){
         Connection connection = null;
         PreparedStatement psLogin = null;
         ResultSet resultSet = null;
         try {
             connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DBNAME),USERNAME,PASSWORD);
-            psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
-            psLogin.setInt(1, userid);
+            if (modeId == 0 || modeId >= 5) {
+                psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
+                psLogin.setInt(1, userid);
+            } else {
+                psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ? AND mode_id = ?");
+                psLogin.setInt(1, userid);
+                psLogin.setInt(2, modeId);
+            }
             resultSet = psLogin.executeQuery();
             if (!resultSet.isBeforeFirst()){
                 Alert alert = new Alert(Alert.AlertType.ERROR);

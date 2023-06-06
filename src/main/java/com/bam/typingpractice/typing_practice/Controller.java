@@ -110,7 +110,8 @@ public class Controller implements Initializable {
             if (waktuPilihan == 10) Player.gameMode = DBUtils.getModeId("10 Seconds");
             else if (waktuPilihan == 30) Player.gameMode = DBUtils.getModeId("30 Seconds");
             else if (waktuPilihan == 60) Player.gameMode = DBUtils.getModeId("60 Seconds");
-            else Player.gameMode = DBUtils.getModeId("120 Seconds");
+            else if (waktuPilihan == 120) Player.gameMode = DBUtils.getModeId("120 Seconds");
+            else Player.gameMode = DBUtils.getModeId("Endless");
         }
 
     }

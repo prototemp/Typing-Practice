@@ -3,6 +3,7 @@ package com.bam.typingpractice.typing_practice;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -33,9 +34,12 @@ public class HistoryController implements Initializable {
     public Button btn_lineChart;
     @FXML
     public Button btn_areaChart;
+    @FXML
+    public ChoiceBox<String> pilihWaktu;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        pilihWaktu.getItems().addAll(PlayerHistory.waktu);
         nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         sumCol.setCellValueFactory(new PropertyValueFactory<>("sessionWords"));
         trueCol.setCellValueFactory(new PropertyValueFactory<>("sessionTrueWords"));
@@ -46,6 +50,14 @@ public class HistoryController implements Initializable {
         btn_barChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"bar-chart.fxml","Bar Chart",null,null));
         btn_lineChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"line-chart.fxml","Bar Chart",null,null));
         btn_areaChart.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"area-chart.fxml","Bar Chart",null,null));
-        DBUtils.userHistory(Player.userId,histTable);
+        if(PlayerHistory.historyState == null || PlayerHistory.historyState.equals("All")){
+            DBUtils.userHistory(Player.userId,histTable,0);
+        }
+        pilihWaktu.setOnAction(actionEvent -> {
+            histTable.getItems().clear();
+            int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
+            PlayerHistory.historyState = pilihWaktu.getValue();
+            if (selectedIndex != 5) DBUtils.userHistory(Player.userId,histTable,selectedIndex);
+        });
     }
 }
