@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.util.Objects;
@@ -19,6 +20,7 @@ public class MainTmp extends Application {
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
         primaryStage.setX(screenBounds.getWidth()/2-((double) 660 /2));
         primaryStage.setY(0);
+        primaryStage.getIcons().add(new Image(Objects.requireNonNull(MainTmp.class.getResourceAsStream("icon.png"))));
         primaryStage.show();
     }
 
