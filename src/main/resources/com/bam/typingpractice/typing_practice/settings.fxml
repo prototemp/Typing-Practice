@@ -5,42 +5,42 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #0a1931;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bam.typingpractice.typing_practice.SettingsController">
-   <Label fx:id="label_welcome" layoutX="236.0" layoutY="66.0" text="Welcome! User" textFill="WHITE">
+   <Label fx:id="label_welcome" alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" layoutY="56.0" text="Welcome! User" textAlignment="CENTER" textFill="WHITE">
       <font>
-         <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         <Font name="Hack Bold" size="24.0" />
       </font>
    </Label>
-   <Button fx:id="btn_logout" layoutX="286.0" layoutY="198.0" mnemonicParsing="false" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Logout" textFill="#ffc947">
+   <Button fx:id="btn_logout" layoutX="306.0" layoutY="228.0" mnemonicParsing="false" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Logout" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Button>
-   <Label alignment="CENTER" layoutX="117.0" layoutY="104.0" text="Frasa Pemulihan Passwordmu Yaitu: " textAlignment="CENTER" textFill="WHITE">
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="104.0" text="Frasa Pemulihan Passwordmu Yaitu: " textAlignment="CENTER" textFill="WHITE">
       <font>
-         <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         <Font name="Hack Bold" size="24.0" />
       </font>
    </Label>
-   <Button fx:id="btn_lanjutkan" layoutX="267.0" layoutY="246.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Kembali" textFill="#ffc947">
+   <Button fx:id="btn_lanjutkan" layoutX="287.0" layoutY="276.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Kembali" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Button>
-   <Button fx:id="btn_erase" layoutX="268.0" layoutY="391.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Hapus Akun" textFill="#ffc947">
+   <Button fx:id="btn_erase" layoutX="288.0" layoutY="421.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Hapus Akun" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Button>
-   <Button fx:id="btn_gantiFrasa" layoutX="256.0" layoutY="343.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Ganti Frasa" textFill="#ffc947">
+   <Button fx:id="btn_gantiFrasa" layoutX="276.0" layoutY="373.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Ganti Frasa" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Button>
-   <Label fx:id="label_frasaUser" alignment="CENTER" contentDisplay="CENTER" layoutX="293.0" layoutY="144.0" text="x" textAlignment="CENTER" textFill="WHITE">
+   <Label fx:id="label_frasaUser" alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="148.0" prefHeight="32.0" prefWidth="188.0" text="xxxx" textAlignment="CENTER" textFill="WHITE">
       <font>
-         <Font name="JetBrains Mono ExtraBold" size="24.0" />
+         <Font name="Hack Bold" size="24.0" />
       </font>
    </Label>
-   <Button fx:id="btn_gantiPassword" layoutX="256.0" layoutY="294.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Ganti Password" textFill="#ffc947">
+   <Button fx:id="btn_gantiPassword" layoutX="276.0" layoutY="324.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="138.0" style="-fx-background-color: #185adb; -fx-cursor: hand;" text="Ganti Password" textFill="#ffc947">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
