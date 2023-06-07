@@ -183,18 +183,13 @@ public class GameController implements Initializable {
     }
 
     private int timer = Controller.waktuPilihan;
-    Runtime runTime = Runtime.getRuntime();
-    String executablePath = "osk";
+    ProcessBuilder processBuilder = new ProcessBuilder("osk");
+    Process process;
     Runnable r = new Runnable() {
         @Override
         public void run() {
             if (timer > -1) {
                 seconds.setText(String.valueOf(timer));
-                try {
-                    runTime.exec(executablePath);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
             }
 
             else {
@@ -205,15 +200,11 @@ public class GameController implements Initializable {
                     secondProgramWord.setFill(Color.WHEAT);
                     pane_basis.setStyle("-fx-background-color: #0a1931;");
 
-                    try {
-                        Player.sessionWords = countAll;
-                        Player.sessionTrueWords = counter;
-                        Player.sessionFalseWords = countAll - counter;
-                        DBUtils.insertScore(Player.sessionWords,Player.sessionTrueWords,Player.userId,Player.gameMode);
-                        Runtime.getRuntime().exec("taskkill /F /IM osk.exe");
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    Player.sessionWords = countAll;
+                    Player.sessionTrueWords = counter;
+                    Player.sessionFalseWords = countAll - counter;
+                    DBUtils.insertScore(Player.sessionWords,Player.sessionTrueWords,Player.userId,Player.gameMode);
+                    process.destroy();
                 }
 
                 if (timer <= -2) {
@@ -253,7 +244,6 @@ public class GameController implements Initializable {
                 e.printStackTrace();
             }
             correct.setOpacity(0);
-
         }
     };
 
@@ -289,6 +279,11 @@ public class GameController implements Initializable {
         // only gets called once
         if (first == 1) {
             first = 0;
+            try {
+                process = processBuilder.start();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             executor.scheduleAtFixedRate(r, 0, 1, TimeUnit.SECONDS);
         }
 
@@ -317,7 +312,5 @@ public class GameController implements Initializable {
             secondProgramWord.setText(words.get(wordCounter+1));
             wordCounter++;
         }
-
-
     }
 }
