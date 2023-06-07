@@ -131,5 +131,10 @@
             <Font name="Century Gothic Bold" size="18.0" />
          </font>
       </CheckBox>
+      <CheckBox fx:id="checkOsk" layoutX="385.0" layoutY="332.0" mnemonicParsing="false" text="On Screen Keyboard" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </CheckBox>
     </Pane>
 </GridPane>

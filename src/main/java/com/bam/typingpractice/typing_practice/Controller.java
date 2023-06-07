@@ -30,6 +30,8 @@ public class Controller implements Initializable {
     @FXML
     public CheckBox checkRandom;
     @FXML
+    public CheckBox checkOsk;
+    @FXML
     private Label timeLabel;
     @FXML
     private Label displayUsername;
@@ -57,10 +59,11 @@ public class Controller implements Initializable {
     public static boolean modSymbol;
     public static boolean modDouble;
     public static boolean modRandom;
+    public static boolean enableOsk;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        checkOsk.setSelected(true);
         pilihWaktu.getItems().addAll(waktu);
         pilihLevel.getItems().addAll(level);
         DBUtils.getSumWords(Player.userId);
@@ -105,6 +108,7 @@ public class Controller implements Initializable {
             modSymbol = checkSymbol.isSelected();
             modDouble = checkDouble.isSelected();
             modRandom = checkRandom.isSelected();
+            enableOsk = checkOsk.isSelected();
             DBUtils.changeScene(ddd, "game.fxml", "Typing Practice", null, null);
             if (waktuPilihan == 10) Player.gameMode = DBUtils.getModeId("10 Seconds");
             else if (waktuPilihan == 30) Player.gameMode = DBUtils.getModeId("30 Seconds");

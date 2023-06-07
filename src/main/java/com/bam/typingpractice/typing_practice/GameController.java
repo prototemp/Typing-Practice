@@ -183,8 +183,8 @@ public class GameController implements Initializable {
     }
 
     private int timer = Controller.waktuPilihan;
-    ProcessBuilder processBuilder = new ProcessBuilder("osk");
-    Process process;
+    private final ProcessBuilder processBuilder = new ProcessBuilder("osk");
+    private Process process;
     Runnable r = new Runnable() {
         @Override
         public void run() {
@@ -204,7 +204,9 @@ public class GameController implements Initializable {
                     Player.sessionTrueWords = counter;
                     Player.sessionFalseWords = countAll - counter;
                     DBUtils.insertScore(Player.sessionWords,Player.sessionTrueWords,Player.userId,Player.gameMode);
-                    process.destroy();
+                    if (Controller.enableOsk){
+                        process.destroy();
+                    }
                 }
 
                 if (timer <= -2) {
@@ -279,10 +281,12 @@ public class GameController implements Initializable {
         // only gets called once
         if (first == 1) {
             first = 0;
-            try {
-                process = processBuilder.start();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            if (Controller.enableOsk){
+                try {
+                    process = processBuilder.start();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
             executor.scheduleAtFixedRate(r, 0, 1, TimeUnit.SECONDS);
         }
