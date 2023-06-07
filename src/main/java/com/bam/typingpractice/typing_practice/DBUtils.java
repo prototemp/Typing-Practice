@@ -18,11 +18,11 @@ import java.util.Objects;
 
 
 public class DBUtils {
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
-    private static final int PORT = 3306;
-    private static final String HOST = "localhost";
-    private static final String DBNAME = "typing-javafx";
+    public static String USERNAME = "root";
+    public static String PASSWORD = "root";
+    public static int PORT = 3306;
+    public static String HOST = "localhost";
+    public static String DBNAME = "typing-javafx";
 
     public static void changeScene(ActionEvent event, String fxmlFile, String title, String username, String frasa){
         Parent root = null;
