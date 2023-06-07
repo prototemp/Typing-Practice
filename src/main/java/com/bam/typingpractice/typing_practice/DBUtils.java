@@ -499,7 +499,7 @@ public class DBUtils {
         ResultSet resultSet = null;
         try {
             connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DBNAME),USERNAME,PASSWORD);
-            if (modeId == 0 || modeId >= 5) {
+            if (modeId == 0 || modeId > 5) {
                 psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
                 psLogin.setInt(1, userid);
             } else {
@@ -562,7 +562,7 @@ public class DBUtils {
         }
         try {
             connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s",HOST,PORT,DBNAME),USERNAME,PASSWORD);
-            if (modeId == 0 || modeId >= 5) {
+            if (modeId == 0 || modeId > 5) {
                 psLogin = connection.prepareStatement("SELECT * from players_score WHERE user_id = ?");
                 psLogin.setInt(1, userid);
             }

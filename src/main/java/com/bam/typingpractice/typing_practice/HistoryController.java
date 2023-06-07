@@ -63,7 +63,7 @@ public class HistoryController implements Initializable {
             int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
             PlayerHistory.historyState = pilihWaktu.getValue();
             PlayerHistory.historyStateInt = selectedIndex;
-            if (selectedIndex != 5) DBUtils.userHistory(Player.userId,histTable,selectedIndex);
+            DBUtils.userHistory(Player.userId,histTable,selectedIndex);
         });
     }
 }

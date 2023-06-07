@@ -47,10 +47,9 @@ public class BarChartController implements Initializable {
             int selectedIndex = pilihWaktu.getSelectionModel().getSelectedIndex() + 1;
             PlayerHistory.historyState = pilihWaktu.getValue();
             PlayerHistory.historyStateInt = selectedIndex;
-            if (selectedIndex != 5) {
-                seriesList = DBUtils.userHistoryChart(Player.userId, selectedIndex);
-                histBarChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));
-            }
+            seriesList = DBUtils.userHistoryChart(Player.userId, selectedIndex);
+            histBarChart.getData().addAll(seriesList.get(0),seriesList.get(1),seriesList.get(2));
+
         });
     }
 }
